@@ -3,8 +3,7 @@ from InputHandling import InputException
 from YouTube import YT
 class File:
     def __init__(self,l=str,a=str) -> None:
-        ans=self.Chek(l,a)
-        if ans:
+        if ans := self.Chek(l,a):
             self.__url=l
             self.__address=a
             self.__video_down=YT(self.__url)
